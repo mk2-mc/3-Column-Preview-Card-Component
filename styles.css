@@ -1,0 +1,110 @@
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --darkCyan: hsl(179, 100%, 13%);
+  
+  --clr-neutral-200: hsl(0, 0%, 95%);
+  --clr-neutral-300: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.938rem;
+  color: var(--clr-neutral-300);
+  line-height: 1.7;
+  background-color: var(--clr-neutral-200);
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.bg-cyan {
+  background-color: var(--cyan);
+}
+
+.bg-darkCyan {
+  background-color: var(--darkCyan);
+}
+
+.clr-orange {
+  color: var(--orange);
+}
+
+.clr-cyan {
+  color: var(--cyan);
+}
+
+.clr-darkCyan {
+  color: var(--darkCyan);
+}
+
+.card-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.card-img {
+  align-self: start;
+}
+
+.card-title {
+  margin-top: 1.125rem;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--clr-neutral-200);
+}
+
+.card-description {
+  margin: 1rem 0 1.5rem;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 9.125rem;
+  margin-top: auto;
+  padding: 0.5rem;
+  background-color: var(--clr-neutral-200);
+  border-radius: 1.875rem;
+  border: 0.125rem solid var(--clr-neutral-200);
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s, margin-top 0s;
+}
+
+.card-button:focus-visible, .card-button:hover {
+  background-color: transparent;
+  color: var(--clr-neutral-200);
+}
+
+@media only screen and (min-width: 50em) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 57.5rem;
+  }
+  
+  .card-description {
+    margin-bottom: 5rem;
+  }
+}
